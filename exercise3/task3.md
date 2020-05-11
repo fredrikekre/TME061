@@ -49,7 +49,7 @@ $$
 \sigma_{1,2} = \sigma_{\mathrm{avg}} \pm R \quad \Rightarrow \quad \sigma_1 = \frac{pa}{2h}(1 + \sqrt{2}),\ \sigma_2 = \frac{pa}{2h}(1 - \sqrt{2})
 $$
 
-Den tredje huvudspänningen för plant spänningstillstånd är 0, så efter att ha numrerad om dem i storleksordning har vi
+Den tredje huvudspänningen för plant spänningstillstånd är 0, så efter att ha numrerat om dem i storleksordning har vi
 
 $$
 \sigma_1 = \frac{pa}{2h}(1 + \sqrt{2}),\ \sigma_2 = 0,\ \sigma_3 = \frac{pa}{2h}(1 - \sqrt{2})
