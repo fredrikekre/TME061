@@ -227,7 +227,7 @@
        height="281.68658"
        x="-60.801128"
        y="-398.23749"
-       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23.png"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <image
@@ -963,37 +963,55 @@ dgAAAABJRU5ErkJggg==
        d="m 359.86904,-316.63051 351.63286,174.0382 17.89902,-108.64675 z"
        id="path13955"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:12,12;stroke-dashoffset:0"
        d="m 360.62446,-363.87166 370.72598,0"
        id="path13957"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker14041)"
        d="m 360.62446,-360.84121 0,31.71212"
        id="path13959"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL)"
        d="m 558.61436,-362.86151 0,67.00619"
        id="path13961"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker13977)"
        d="m 729.33014,-361.85136 0,97.37203"
        id="path13963"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="296.98486"
        y="-329.02136"
        id="text14585"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan14587"
          x="296.98486"
@@ -1006,7 +1024,10 @@ dgAAAABJRU5ErkJggg==
        y="-319.42493"
        x="569.72607"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
          y="-319.42493"
          x="569.72607"
          id="tspan14591"
@@ -1019,7 +1040,10 @@ dgAAAABJRU5ErkJggg==
        y="-305.28278"
        x="737.41138"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
          y="-305.28278"
          x="737.41138"
          id="tspan14599"
@@ -1030,11 +1054,17 @@ dgAAAABJRU5ErkJggg==
        style="fill:none;fill-rule:evenodd;stroke:#fd0b0b;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 363.57143,-318.35208 196.42857,0 0,35 z"
        id="path14605"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#0016ff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:12,12;stroke-dashoffset:0"
        d="m 364.28571,-318.35208 365.71429,0 0,65.71428 z"
        id="path14607"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/fredrik/dev/TME061/_assets/uppg-2.23-def.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
 </svg>
