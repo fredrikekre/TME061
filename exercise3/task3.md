@@ -5,85 +5,67 @@
 
 ## Räkneövning 3 - Uppgift 8.14 från [^moller]
 
-En axel med cirkulärt tvärsnitt är fast inspänd i bägge ändar och belastas med ett vridmoment $T$ enligt figuren. Materialet är lineärt elastiskt–idealplastiskt med skjuvmodulen $G$ och sträckgränsen $\tau_s$.
-Bestäm det vridmoment $T = T_s$ vid vilket någon del av axeln börjar plasticera, samt motsvarande vridvinkel $\varphi_s$ vid momentets angreppspunkt.
+Ett öppet tunnväggigt rör belastas av ett inre övertryck $p$ och ett vridande moment $M_v = \pi pa^3$, se figur.
 
-\figurenc{/assets/uppg-4.18.png}
+a) Bestäm spänningstillståndet; rita Mohrs spänningscirkel; beräkna huvudspänningarna.
 
-| G | $\boldsymbol{\tau_s}$ | L | d |
-|:--|:--|:--|:--|
-| $\SI{75}{GPa}$ | $\SI{100}{MPa}$ | $\SI{300}{mm}$ | $\SI{20}{mm}$ |
+b) Beräkna effektivspänning enligt Tresca och enligt von Mise.
 
+\figurenc{/assets/uppg-8.14.png}
 
 ### Lösning
 
-Vi kommer här behöva använda de tre sambandanden för jämvikt, material, och kompatibilitet.
-
-1. **Jämviktssamband**
-
-   Vi börjar med att snitta axeln och införa snittmoment:
-   \figurenc{/assets/uppg-4.18-snitt.png}
-   <!-- \figure{Snittad stång med införda snittkrafter.}{fig-3}{/assets/uppg-2.3-snitt.png} -->
-
-   Vi ställer sedan upp momentjämvikt för snittet:
-   $$
-   \rightarrow:\ -T_1 + T_2  + T = 0.
-   $$
-
-2. **Materialsamband**
-
-   För en lineärt elastiskt axel har vi sambandet:
-   $$
-   T = K G \frac{\mathrm{d}\varphi}{\mathrm{d}x}, \quad \mathrm{(jämför\ med\ } N = A E\varepsilon \mathrm{\ för\ en\ stång})
-   $$
-   där $K$ är tvärsnittets vridstyvhetsfaktor. Vi kan alltså ställa upp följade samband för $T_1$ och $T_2$:
-   $$
-   T_1 = K G \frac{\mathrm{d}\varphi_1}{\mathrm{d}x},
-   $$
-   $$
-   T_2 = K G \frac{\mathrm{d}\varphi_2}{\mathrm{d}x}.
-   $$
-
-<!--    @@note @@title Notering @@ @@content
-   Notera att eftersom $N_1 = N_2$ från ekv. (1) har vi också sambandet
-   $$
-   \sigma_1 A_1 = \sigma_2 A_2 \qquad \Rightarrow \qquad \sigma_2 = \sigma_1 \frac{A_1}{A_2}
-   $$
-   vilket vi kan använda senare.
-   @@ @@ -->
-
-3. **Kompatibilitetssamband**
-
-   Eftersom axeln är fast inspänd i båda ändar är vridningsvinkeln 0 där: $\varphi(x = 0) = \varphi(x = 3L) = 0$. Vi inför $\varphi = \varphi(x = 2L)$ som vridningsvinkeln vid momentets angreppspunkt. Vi kan då ställa upp följande samband för derivatan av vridningen för vänster och höger del
-   $$
-   \frac{\mathrm{d}\varphi_1}{\mathrm{d}x} = \frac{\varphi(x = 2L)-\varphi(x=0)}{2L - 0} = \frac{\varphi}{2L},
-   $$
-   $$
-   \frac{\mathrm{d}\varphi_2}{\mathrm{d}x} = \frac{\varphi(x = 3L)-\varphi(x=2L)}{3L - 2L} = \frac{-\varphi}{L}.
-   $$
-
-Vi har nu tillräckligt med information för att lösa systemet. Vi sätter in ekvation (6-7) i (4-5), och sen (4-5) i ekvation (1):
+För cirkulära strukturer används ofta ett cirkulärt koordinatsystem. Vi definierar $x$ att vara centerlinjen genom röret, och $\theta$ att vara koordinaten runt $x$. Formlerna för cylindriska behållare (även kallade ångpanneformlerna) ger då spänningen pga de intre trycket $\sigma_\theta$:
 
 $$
--K G \frac{\varphi}{2L} + K G \frac{-\varphi}{L}  + T = 0 \quad \Rightarrow \quad \varphi = \frac{2LT}{3KG}.
+\sigma_\theta = \frac{pa}{h},
 $$
 
-Eftersom spänningen kommer bli störst i den högra delen (störst moment) ställer vi upp en ekvation för den maximala spänningen i den delen, och sätter den till sträckgränsen:
+där $p$ är de inre trycket, $a$ radien och $h$ behållarens tjocklek. Cylindern är också utsatt för ett vridande moment $M_v$ vilket resulterar i en (vrid)skjuvspänning $\tau_{\theta x}$:
+
 $$
-\tau_s = |G \frac{d}{2} \frac{\mathrm{d}\varphi_2}{\mathrm{d}x}| = |G \frac{d}{2} \frac{-\varphi}{L}| = |-\frac{T_sd}{3K}| \quad \Rightarrow \quad T_s = \pm\frac{3K\tau_s}{d}
+\tau_{\theta x} = \frac{M_v}{2\pi a^2 h} = \frac{\pi pa^3}{2\pi a^2 h} = \frac{pa}{2h}.
 $$
 
-Vridstyvheten för en massiv axel fås från formelsamling:
+Övriga spänningar är 0. Vi kan då rita Mohrs spänningscirkel
+
+\figurenc{/assets/uppg-8.14-mohr.png}
+
+Huvudspänningar kan räknas ut enligt föregående uppgift genom att ta fram cirkelns mittpunkt:
+
 $$
-K = \frac{\pi d^4}{32}
+\sigma_{\mathrm{avg}} = \frac{\sigma_x + \sigma_\theta}{2} = \frac{pa}{2h}
 $$
-vilket ger oss svaren:
+
+och cirkelns radie $R$:
+
 $$
-T_s = \pm\frac{3\pi d^3}{32}\tau_s
+R = \frac{1}{2}\sqrt{(\sigma_\theta - \sigma_x)^2 + (-\tau_{\theta x} - \tau_{\theta x})^2} = \frac{\sqrt{2}pa}{2h}
 $$
-Slutligen får vi fram den motsvarande vinkeln från ekvation (7) med $T = T_s$:
+
+Huvudspänningarna fås då som
+
 $$
-\varphi_s = \frac{2LT_s}{3KG} = \pm\frac{2L}{Gd}\tau_s
+\sigma_{1,2} = \sigma_{\mathrm{avg}} \pm R \quad \Rightarrow \quad \sigma_1 = \frac{pa}{2h}(1 + \sqrt{2}),\ \sigma_2 = \frac{pa}{2h}(1 - \sqrt{2})
+$$
+
+Den tredje huvudspänningen för plant spänningstillstånd är 0, så efter att ha numrerad om dem i storleksordning har vi
+
+$$
+\sigma_1 = \frac{pa}{2h}(1 + \sqrt{2}),\ \sigma_2 = 0,\ \sigma_3 = \frac{pa}{2h}(1 - \sqrt{2})
+$$
+
+
+När huvudspänningarna är beräknade är det enkelt att ta fram effektivspänningar. Trescas formulering är differensen mellan största och minsta huvudspänning:
+
+$$
+\sigma_e^\mathrm{Tresca} = \sigma_1 - \sigma_3 = \frac{pa}{2h}(1 + \sqrt{2}) - \frac{pa}{2h}(1 - \sqrt{2}) = \frac{\sqrt{2}pa}{h}
+$$
+
+och enligt von Mise
+
+$$
+\sigma_e^\mathrm{vonMise} = \frac{1}{\sqrt{2}} \sqrt{(\sigma_1-\sigma_2)^2 + (\sigma_1-\sigma_3)^2 + (\sigma_2-\sigma_3)^2} = \frac{\sqrt{7}pa}{2h}
 $$
 
 ---

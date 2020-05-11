@@ -17,7 +17,7 @@ publish: optimize
 build: clean
 	${JULIA} -e 'Franklin.serve(single=true)'
 serve: clean
-	${JULIA} -e 'Franklin.serve()'
+	${JULIA} -e 'while true; try; Franklin.serve(); catch e; sleep(1); end; end'
 lserve: optimize
 	${JULIA} -e 'LiveServer.serve(dir="__site")'
 # deploy: optimize
