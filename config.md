@@ -10,7 +10,7 @@ The website_* must be defined for the RSS to work
 @def author = "Fredrik Ekre"
 prepath = "TME061"
 
-@def include = ["_assets/", "_css/", "_libs/", "index.md", "404.md", "exercise1/", "exercise2/", "exercise3/", "exercise4/"]
+@def include = ["_assets/", "_css/", "_libs/", "index.md", "404.md", "exercise1/", "exercise2/", "exercise3/", "exercise4/", "exercise5/"]
 @def ignore = setdiff([isfile(x) ? x : x * "/" for x in readdir()], globvar("include"))
 
 <!-- Table of contents -->
