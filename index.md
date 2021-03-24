@@ -4,4 +4,4 @@
 
 # Räkneövningar TME061
 
-På denna sida finns lösta uppgifter för kursen TME061, läsperiod 4, läsår 2019/2020.
+På denna sida finns lösta uppgifter för kursen TME061, läsperiod 4, läsår 2020/2021.
