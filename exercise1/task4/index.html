@@ -60,4 +60,45 @@ N2 = subs(N2, [a1, a2, a3], [a1_, a2_, a3_])
 N3 = subs(N3, [a1, a2, a3], [a1_, a2_, a3_])
 sigma1 = subs(sigma1, [a1, a2, a3], [a1_, a2_, a3_])
 sigma2 = subs(sigma2, [a1, a2, a3], [a1_, a2_, a3_])
-sigma3 = subs(sigma3, [a1, a2, a3], [a1_, a2_, a3_])</code></pre> <hr /> <h2 id=referenser ><a href="#referenser">Referenser</a></h2> <table class=fndef  id="fndef:moller"> <tr> <td class=fndef-backref ><a href="#fnref:moller">[1]</a> <td class=fndef-content >P. Möller, <em>Exempelsamling i Hållfasthetslära</em> </table> <!-- <div class=page-foot > <div class=copyright > &copy; {{ fill author }}. Last modified: {{ fill fd_mtime }}. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>. </div> </div> --> </div> </div> </div> </div> <!-- end of class page-wrap-->
+sigma3 = subs(sigma3, [a1, a2, a3], [a1_, a2_, a3_])</code></pre> <h3 id=julia_kod ><a href="#julia_kod">Julia kod</a></h3> <pre><code class="julia hljs"><span class=hljs-comment ># Load symbolics library</span>
+<span class=hljs-keyword >using</span> Symbolics
+
+<span class=hljs-comment ># Define variables</span>
+<span class=hljs-meta >@variables</span> E L A Q E δ[<span class=hljs-number >1</span>:<span class=hljs-number >3</span>] a
+
+<span class=hljs-comment ># Constituve relations (Hooke&#x27;s law)</span>
+ϵ = δ / L
+σ = E * ϵ
+N = σ * A
+
+<span class=hljs-comment ># Equations</span>
+eqs = [
+    N[<span class=hljs-number >1</span>] + N[<span class=hljs-number >2</span>] + N[<span class=hljs-number >3</span>] ~ Q,                <span class=hljs-comment ># Force equilibrium</span>
+    N[<span class=hljs-number >2</span>] * a + N[<span class=hljs-number >3</span>] * <span class=hljs-number >2</span>a ~ Q * <span class=hljs-number >4</span>a/<span class=hljs-number >3</span>,       <span class=hljs-comment ># Moment equilibrium</span>
+    (δ[<span class=hljs-number >3</span>] - δ[<span class=hljs-number >1</span>]) / <span class=hljs-number >2</span>a ~ (δ[<span class=hljs-number >2</span>] - δ[<span class=hljs-number >1</span>]) / a <span class=hljs-comment ># Compatibility</span>
+]
+
+<span class=hljs-comment ># Solve for the δ&#x27;s</span>
+δs = Symbolics.solve_for(eqs, δ)
+
+<span class=hljs-comment ># Insert solution into expressions for N</span>
+N = simplify.(substitute.(N, (<span class=hljs-built_in >Dict</span>(δ .=&gt; δs),)))</code></pre> Detta ger <code>N</code>: <pre><code class="plaintext hljs">3-element Vector{Symbolics.Num}:
+ 0.16666666666666674Q
+ 0.33333333333333326Q
+ 0.5Q</code></pre> <p>Sätt nu <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mn>2</mn></msub><mo>=</mo><msub><mi>N</mi><mn>3</mn></msub><mo>=</mo><msub><mi>σ</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">N_2 = N_3 = \sigma_y</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.83333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.83333em;vertical-align:-0.15em;"></span><span class=mord ><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.15em;"><span></span></span></span></span></span></span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >=</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.716668em;vertical-align:-0.286108em;"></span><span class=mord ><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class=msupsub ><span class="vlist-t vlist-t2"><span class=vlist-r ><span class=vlist  style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class=pstrut  style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class=vlist-s >​</span></span><span class=vlist-r ><span class=vlist  style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>:</p> <pre><code class="julia hljs"><span class=hljs-comment ># Define variables</span>
+<span class=hljs-meta >@variables</span> σʸ N[<span class=hljs-number >1</span>:<span class=hljs-number >3</span>]
+
+<span class=hljs-comment ># Equations</span>
+eqs = [
+    N[<span class=hljs-number >1</span>] + N[<span class=hljs-number >2</span>] + N[<span class=hljs-number >3</span>] ~ Q,                 <span class=hljs-comment ># Force equilibrium</span>
+    N[<span class=hljs-number >2</span>] * a + N[<span class=hljs-number >3</span>] * <span class=hljs-number >2</span>a ~ Q * <span class=hljs-number >4</span>a/<span class=hljs-number >3</span>,        <span class=hljs-comment ># Moment equilibrium</span>
+    N[<span class=hljs-number >3</span>] ~ σʸ * A,                          <span class=hljs-comment ># Perfect plasticity</span>
+    N[<span class=hljs-number >2</span>] ~ σʸ * A,                          <span class=hljs-comment ># Perfect plasticity</span>
+]
+
+<span class=hljs-comment ># Solve for forces N and area A</span>
+Symbolics.solve_for(eqs, [N; A])</code></pre> <p>Detta ger <code>N</code> och <code>A</code>:</p> <pre><code class="plaintext hljs">4-element Vector{Symbolics.Num}:
+ 0.11111111111111116Q
+ 0.4444444444444444Q
+ 0.4444444444444444Q
+ 0.4444444444444444Q*(σʸ^-1)</code></pre> <hr /> <h2 id=referenser ><a href="#referenser">Referenser</a></h2> <table class=fndef  id="fndef:moller"> <tr> <td class=fndef-backref ><a href="#fnref:moller">[1]</a> <td class=fndef-content >P. Möller, <em>Exempelsamling i Hållfasthetslära</em> </table> <!-- <div class=page-foot > <div class=copyright > &copy; {{ fill author }}. Last modified: {{ fill fd_mtime }}. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>. </div> </div> --> </div> </div> </div> </div> <!-- end of class page-wrap-->

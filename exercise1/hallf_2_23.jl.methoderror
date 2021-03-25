@@ -1,0 +1,34 @@
+#!/usr/bin/env julia
+
+using Symbolics
+
+@variables E L A Q E δ[1:3] a
+
+ϵ = δ / L
+σ = E * ϵ
+N = σ * A
+
+eqs = [
+    N[1] + N[2] + N[3] ~ Q,
+    N[2] * a + N[3] * 2a ~ Q * 4a/3,
+    (δ[3] - δ[1]) / 2a ~ (δ[2] - δ[1]) / a
+]
+
+δs = Symbolics.solve_for(eqs, δ)
+
+N = simplify.(substitute.(N, (Dict(δ .=> δs),)))
+
+
+@variables σʸ
+σ = [E * ϵ[1], E * ϵ[2], σʸ]
+N = σ * A
+
+eqs = [
+    N[1] + N[2] + N[3] ~ Q,
+    N[2] * a + N[3] * 2a ~ Q * 4a/3,
+    N[3] ~ σʸ * A,
+]
+
+δs = Symbolics.solve_for(eqs, N)
+
+
