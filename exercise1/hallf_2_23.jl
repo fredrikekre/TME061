@@ -13,9 +13,9 @@ N = σ * A
 
 # Equations
 eqs = [
-    N[1] + N[2] + N[3] ~ Q,                # Force equilibrium
-    N[2] * a + N[3] * 2a ~ Q * 4a/3,       # Moment equilibrium
-    (δ[3] - δ[1]) / 2a ~ (δ[2] - δ[1]) / a # Compatibility
+    N[1] + N[2] + N[3]       ~ Q,                # Force equilibrium
+    N[2] * a + N[3] * 2a     ~ Q * 4//3 * a,     # Moment equilibrium
+    (δ[3] - δ[1]) / a * 1//2 ~ (δ[2] - δ[1]) / a # Compatibility
 ]
 
 # Solve for the δ's
@@ -30,11 +30,11 @@ N = simplify.(substitute.(N, (Dict(δ .=> δs),)))
 
 # Equations
 eqs = [
-    N[1] + N[2] + N[3] ~ Q,                 # Force equilibrium
-    N[2] * a + N[3] * 2a ~ Q * 4a/3,        # Moment equilibrium
-    N[3] ~ σʸ * A,                          # Perfect plasticity
-    N[2] ~ σʸ * A,                          # Perfect plasticity
+    N[1] + N[2] + N[3]   ~ Q,            # Force equilibrium
+    N[2] * a + N[3] * 2a ~ Q * 4//3 * a, # Moment equilibrium
+    N[3]                 ~ σʸ * A,       # Perfect plasticity
+    N[2]                 ~ σʸ * A,       # Perfect plasticity
 ]
 
 # Solve for forces N and area A
-sol = Symbolics.solve_for(eqs, [N; A])
+Symbolics.solve_for(eqs, [N; A])
