@@ -76,10 +76,37 @@ $$
 
 Alltså,
 $$
-\sigma_n = (\boldsymbol{\sigma} \cdot \boldsymbol{n}_\perp) \cdot \boldsymbol{n}_\perp = \SI{64}{MPa}
+\sigma_n = (\boldsymbol{\sigma} \cdot \boldsymbol{n}_\perp) \cdot \boldsymbol{n}_\perp = \left(\begin{pmatrix}
+120 && -40 && 0 \\
+-40 && 0 && 0 \\
+0 && 0 && -100
+\end{pmatrix} \cdot \begin{pmatrix}
+-\sin 30^\circ\\
+\cos 30^\circ\\
+0
+\end{pmatrix} \right) \cdot \begin{pmatrix}
+-\sin 30^\circ\\
+\cos 30^\circ\\
+0
+\end{pmatrix}
+
+= \SI{64}{MPa}
 $$
 $$
-\tau_n = (\boldsymbol{\sigma} \cdot \boldsymbol{n}_\perp) \cdot \boldsymbol{n}_\parallel = \SI{-72}{MPa}
+\tau_n = (\boldsymbol{\sigma} \cdot \boldsymbol{n}_\perp) \cdot \boldsymbol{n}_\parallel  = \left(\begin{pmatrix}
+120 && -40 && 0 \\
+-40 && 0 && 0 \\
+0 && 0 && -100
+\end{pmatrix} \cdot \begin{pmatrix}
+-\sin 30^\circ\\
+\cos 30^\circ\\
+0
+\end{pmatrix} \right) \cdot \begin{pmatrix}
+\cos 30^\circ\\
+\sin 30^\circ\\
+0
+\end{pmatrix}
+= \SI{-72}{MPa}
 $$
 
 ---

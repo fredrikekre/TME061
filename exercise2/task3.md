@@ -62,7 +62,7 @@ Vi kommer här behöva använda de tre sambandanden för jämvikt, material, och
    \frac{\mathrm{d}\varphi_2}{\mathrm{d}x} = \frac{\varphi(x = 3L)-\varphi(x=2L)}{3L - 2L} = \frac{-\varphi}{L}.
    $$
 
-Vi har nu tillräckligt med information för att lösa systemet. Vi sätter in ekvation (6-7) i (4-5), och sen (4-5) i ekvation (1):
+Vi har nu tillräckligt med information för att lösa systemet. Vi sätter in ekvation (5-6) i (3-4), och sen (3-4) i ekvation (1):
 
 $$
 -K G \frac{\varphi}{2L} + K G \frac{-\varphi}{L}  + T = 0 \quad \Rightarrow \quad \varphi = \frac{2LT}{3KG}.
