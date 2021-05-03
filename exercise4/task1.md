@@ -1,7 +1,7 @@
 @def title = "Räkneövning 4"
 @def hascode = false
 @def hasmath = true
-@def date = Date(2020, 5, 11)
+@def date = Date(2021, 5, 4)
 
 ## Räkneövning 4 - Uppgift 8.4 från [^moller]
 

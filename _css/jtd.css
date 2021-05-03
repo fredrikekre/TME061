@@ -332,7 +332,7 @@ MAIN CONTENT
 @media (min-width: 66.5rem){
   .main-content {
     /*margin-left:calc((100% - 1064px) / 2 + 264px);*/
-    margin-left:calc(264px + 10%);
+    margin-left:calc(264px + 5%);
   }
 }
 
