@@ -47,7 +47,7 @@ $$
 \circlearrowright:\ M(x) - M_a - \underbrace{\frac{Q}{L}x}_{\mathrm{kraft}}\ \underbrace{\frac{x}{2}}_{\mathrm{hävarm}} + R_a x = 0 \quad \Rightarrow \quad M(x) = \frac{Q}{2L}x^2 - R_a x + M_a = \frac{Q}{2L}x^2 -Q x + \frac{QL}{2}
 $$
 
-**c)** Vi vet att tvärkraften är derivatan av momentet, så från ekvation xxx kan vi räkna ut tvärkraften genom att derivera:
+**c)** Vi vet att tvärkraften är derivatan av momentet, så från ekvation (4) kan vi räkna ut tvärkraften genom att derivera:
 
 $$
 T(x) = \frac{\mathrm{d}M(x)}{\mathrm{d}x} = \frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{Q}{2L}x^2 -Q x + \frac{QL}{2}\right) =  \frac{Q}{L}x - Q.
